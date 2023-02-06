@@ -5,36 +5,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Deniss Mijusovs Portfolio</title>
     <link rel="stylesheet" href="./style.css" />
+    <!-- HOSTED -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css"
+      media="all"
       rel="stylesheet"
     />
   </head>
   <body>
-
     <div class="container">
-
       <!-- INTRODUCTION -->
 
-        <div class="intro">
-          <div class="name">
-            Hello, I'm <span class="highlight">Deniss Mijusovs</span>. <br />
-            I'm a full-stack junior web developer.
-          </div>
+      <div class="intro">
+        <div class="name">
+          Hello, I'm <span class="highlight">Deniss Mijusovs</span>. <br />
+          I'm a full-stack junior web developer. <br />
+          <button class="button">Download CV</button>
         </div>
+      </div>
 
-        <div class="jobTitleContainer dark">
-          <h2 class="jobTitle">Learning <span class="highlight">React.js</span></h2>
-        </div>
+      <div id="navbar">
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="menu()">
+          <i class="mdi mdi-menu"></i>
+        </a>
 
-        <div class="jobTitleContainer purple">
-          <h2 class="jobTitle"><span class="highlight">PERN</span> stack</h2>
+        <div id="myLinks">
+          <a class="active" href="#"><i class="mdi mdi-home-outline"></i> Home</a>
+          <a href="#"><i class="mdi mdi-information-variant"></i> About</a>
+          <a href="#"><i class="mdi mdi-file-code-outline"></i> Projects</a>
+          <a href="#"><i class="mdi mdi-email-outline"></i> Contact</a>
         </div>
+      </div>
+
+      <div class="jobTitleContainer dark">
+        <h2 class="jobTitle">
+          Learning <span class="highlight">React.js</span>
+        </h2>
+      </div>
+
+      <div class="jobTitleContainer purple">
+        <h2 class="jobTitle"><span class="highlight">PERN</span> stack</h2>
+      </div>
 
       <!-- PROJECTS -->
 
       <div class="projects">
         <h1 class="projectsTitle">Here are some of my projects</h1>
+
+        <!-- Expense Tracker -->
+
         <div class="project">
           <div class="phone">
             <img src="./img/phone.png" alt="" />
@@ -43,7 +68,9 @@
             </div>
           </div>
           <div class="projectDetail">
-            <h1 class="projectTitle"><span class="highlight">Expense App</span></h1>
+            <h1 class="projectTitle">
+              <span class="highlight">Expense App</span>
+            </h1>
             <p class="projectDesc">
               React app. Expense tracker with filter by year and chart
             </p>
@@ -55,6 +82,9 @@
             </button>
           </div>
         </div>
+
+        <!-- Food order app -->
+
         <div class="project">
           <div class="laptop">
             <img src="./img/laptop.png" alt="" />
@@ -63,7 +93,9 @@
             </div>
           </div>
           <div class="projectDetail">
-            <h1 class="projectTitle"><span class="highlight">ReactMeals</span></h1>
+            <h1 class="projectTitle">
+              <span class="highlight">React Meals</span>
+            </h1>
             <p class="projectDesc">
               Food order app, cart, modal, total, add/remove item
             </p>
@@ -98,11 +130,11 @@
         </div>-->
       </div>
 
-      <!-- LinkedIn -->
-      
-      <div class="linkedinContainer">
-        <h1 class="linkedinTitle"><span class="highlight">Contact me?</span></h1>
-        <div class="linkedinChart">
+      <!-- Contact me -->
+
+      <div class="contactContainer">
+        <h1 class="contactTitle"><span class="highlight">Contact me?</span></h1>
+        <div class="githubChart">
           <div class="dates">
             <span>Jan</span>
             <span>Feb</span>
@@ -118,22 +150,59 @@
             <span>Dec</span>
           </div>
           <div class="boxContainer"></div>
-          <h1 class="linkedinLg">
+          <h1 class="githubLg">
             on <br />
-            <a href="https://www.linkedin.com/in/deniss-mijusovs-11514290">
-              <img src="./img/LinkedIn.png" alt="" width="200vw" />
+            <a target="_blank" href="https://github.com/Deniss1988">
+              <img src="./img/github.png" alt="" width="200vw" />
             </a>
           </h1>
         </div>
-        <div class="linkedinSm">
+        <div class="githubSm">
           <h2>
             Find Me on <br />
-            <a href="https://www.linkedin.com/in/deniss-mijusovs-11514290">
-              <img src="./img/LinkedIn.png" alt="" width="200vw" />
+            <a target="_blank" href="https://github.com/Deniss1988">
+              <img src="./img/github.png" alt="" width="200vw" />
             </a>
           </h2>
         </div>
       </div>
+
+      <!-- Footer -->
+
+      <footer>
+        <i
+          class="mdi mdi-chevron-double-up page-link"
+          onclick="topFunction()"
+        ></i>
+
+        <div class="icon-wrap flex row">
+          <a href="#">
+            <div class="flex icon" id="icon-2">
+              <i class="mdi mdi-linkedin"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="flex icon" id="icon-3">
+              <i class="mdi mdi-facebook"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="flex icon" id="icon-4">
+              <i class="mdi mdi-instagram"></i>
+            </div>
+          </a>
+          <a href="#">
+            <div class="flex icon" id="icon-5">
+              <i class="mdi mdi-codepen"></i>
+            </div>
+          </a>
+        </div>
+        <div class="info-box">
+          <div class="footnote">
+            DENISS MIJUSOVS <span class="highlight">&copy;2023</span>
+          </div>
+        </div>
+      </footer>
     </div>
     <script src="./app.js"></script>
   </body>
