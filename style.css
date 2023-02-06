@@ -63,13 +63,13 @@ a {
 #navbar {
   width: 100%;
   overflow: auto;
-  background-color: #333;
+  background-color: #1b242f;
   z-index: 1000;
 }
 
 /* Style the hamburger menu */
 #navbar a.icon {
-  background: #e31b6d;
+  background: #1b242f;
   display: block;
   padding: 15px;
 }
@@ -87,11 +87,11 @@ a {
 }
 
 #navbar a:hover {
-  background-color: #000;
+  background-color: #04c2c9;
 }
 
 #navbar a.active {
-  background-color: #04aa6d;
+  background-color: #e31b6d;
 }
 /* Page content */
 .content {
