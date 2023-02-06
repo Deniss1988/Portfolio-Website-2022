@@ -14,7 +14,7 @@ a {
   overflow: hidden;
 }
 
-.flex {
+.intro {
   align-items: center;
   display: flex;
   flex-direction: column;
