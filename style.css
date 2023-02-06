@@ -60,7 +60,7 @@ a {
   flex-wrap: wrap;
 }
 /* Style the navbar */
-#navbar {
+#nav {
   width: 100%;
   overflow: auto;
   background-color: #1b242f;
@@ -68,14 +68,14 @@ a {
 }
 
 /* Style the hamburger menu */
-#navbar a.icon {
+#nav a.icon {
   background: #1b242f;
   display: block;
   padding: 15px;
 }
 
 /* Navbar links */
-#navbar a {
+#nav a {
   float: left;
   display: block;
   padding: 12px;
@@ -86,11 +86,11 @@ a {
   text-align: center;
 }
 
-#navbar a:hover {
+#nav a:hover {
   background-color: #04c2c9;
 }
 
-#navbar a.active {
+#nav a.active {
   background-color: #e31b6d;
 }
 /* Page content */
@@ -115,7 +115,7 @@ a {
   #navbar #myLinks {
     display: none;
   }
-  #navbar a {
+  #nav a {
     float: none;
     display: block;
     width: 100%;
