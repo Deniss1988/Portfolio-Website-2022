@@ -21,11 +21,11 @@
     <div class="container">
       <!-- INTRODUCTION -->
 
-      <div class="intro">
+      <div id="home" class="intro">
         <div class="name">
           Hello, I'm <span class="highlight">Deniss Mijusovs</span>. <br />
           I'm a full-stack junior web developer. <br />
-          <button class="button">Download CV</button>
+          <a href="/CV_Deniss_Mijusovs.pdf" download><button class="button">Download CV</button></a>
         </div>
       </div>
 
@@ -36,14 +36,18 @@
         </a>
 
         <div id="myLinks">
-          <a class="active" href="#"><i class="mdi mdi-home-outline"></i> Home</a>
-          <a href="#"><i class="mdi mdi-information-variant"></i> About</a>
-          <a href="#"><i class="mdi mdi-file-code-outline"></i> Projects</a>
-          <a href="#"><i class="mdi mdi-email-outline"></i> Contact</a>
+          <a class="active" href="#home"
+            ><i class="mdi mdi-home-outline"></i> Home</a
+          >
+          <a href="#about"><i class="mdi mdi-information-variant"></i> About</a>
+          <a href="#projects"
+            ><i class="mdi mdi-file-code-outline"></i> Portfolio</a
+          >
+          <a href="#contact"><i class="mdi mdi-email-outline"></i> Contact</a>
         </div>
       </div>
 
-      <div class="jobTitleContainer dark">
+      <div id="about" class="jobTitleContainer dark">
         <h2 class="jobTitle">
           Learning <span class="highlight">React.js</span>
         </h2>
@@ -55,7 +59,7 @@
 
       <!-- PROJECTS -->
 
-      <div class="projects">
+      <div id="projects" class="projects">
         <h1 class="projectsTitle">Here are some of my projects</h1>
 
         <!-- Expense Tracker -->
@@ -130,10 +134,11 @@
         </div>-->
       </div>
 
-      <!-- Contact me -->
+      <!-- Contact -->
 
-      <div class="contactContainer">
-        <h1 class="contactTitle"><span class="highlight">Contact me?</span></h1>
+      <div id="contact" class="contactContainer">
+        <h1 class="contactTitle"><span class="highlight">Contact</span></h1>
+        <p class="projectDesc">Have a question or want to work together?</p>
         <div class="githubChart">
           <div class="dates">
             <span>Jan</span>
@@ -176,26 +181,26 @@
         ></i>
 
         <div class="icon-wrap flex row">
-          <a href="#">
+          <a href="https://www.linkedin.com/in/deniss-mijusovs-11514290/">
             <div class="flex icon" id="icon-2">
               <i class="mdi mdi-linkedin"></i>
             </div>
           </a>
-          <a href="#">
+          <a href="https://www.facebook.com/denis.miyusov/">
             <div class="flex icon" id="icon-3">
               <i class="mdi mdi-facebook"></i>
             </div>
           </a>
-          <a href="#">
+          <a href="https://www.instagram.com/deniscj1988/">
             <div class="flex icon" id="icon-4">
               <i class="mdi mdi-instagram"></i>
             </div>
           </a>
-          <a href="#">
+          <!-- <a href="#">
             <div class="flex icon" id="icon-5">
               <i class="mdi mdi-codepen"></i>
             </div>
-          </a>
+          </a> -->
         </div>
         <div class="info-box">
           <div class="footnote">
