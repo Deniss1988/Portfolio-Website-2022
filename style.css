@@ -1,294 +1,470 @@
 * {
-    padding: 0;
-    margin: 0;
-    font-family: "Open Sans", sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.button {
+  border: 1px solid black;
+  border-radius: 16px;
+  box-sizing: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 13pt;
+  margin-top: 30px;
+  padding: 10px 20px;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  background-color: #e31b6d;
+  border-color: black;
+}
+
+.button .mdi {
+  vertical-align: middle;
+}
+
+.container {
+  background-color: #111;
+  overflow: hidden;
+}
+
+.intro {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  background: url("./img/header.jpg");
+  background-size: cover;
+  background-color: rebeccapurple;
+}
+
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.flex.row {
+  flex-direction: row;
+}
+.flex.wrap {
+  flex-wrap: wrap;
+}
+/* Style the navbar */
+#navbar {
+  width: 100%;
+  overflow: auto;
+  background-color: #1b242f;
+  z-index: 1000;
+}
+
+/* Style the hamburger menu */
+#navbar a.icon {
+  background: #1b242f;
+  display: block;
+  padding: 15px;
+}
+
+/* Navbar links */
+#navbar a {
+  float: left;
+  display: block;
+  padding: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 17px;
+  width: 20%; /* Five links of equal widths */
+  text-align: center;
+}
+
+#navbar a:hover {
+  background-color: #04c2c9;
+}
+
+#navbar a.active {
+  background-color: #e31b6d;
+}
+/* Page content */
+.content {
+  padding: 16px;
+}
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+
+@media screen and (max-width: 650px) {
+  /* Hide the links inside the navigation menu (except for logo/home) */
+  #navbar #myLinks {
+    display: none;
   }
-  
-  .container {
-    background-color: #111;
-    overflow: hidden;
-  }
-  
-  .salute {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .saluteTextContainer {
-    flex: 3;
-  }
-  
-  .saluteImgContainer {
-    flex: 1;
-  }
-  
-  .saluteText {
-    color: lightsteelblue;
-    font-size: 60vw;
-    cursor: default;
-  }
-  
-  .saluteImg {
+  #navbar a {
+    float: none;
+    display: block;
     width: 100%;
+    text-align: left;
   }
-  
-  .nameContainer {
-    height: 100vh;
-    background-color: rebeccapurple;
-  }
-  
-  .name {
-    font-size: 15vw;
-    color: whitesmoke;
-    cursor: default;
-    text-align: center;
-    line-height: 100vh;
-  }
-  
-  .jobTitleContainer {
-    height: 100vh;
-  }
-  
-  .dark {
-    background: url("./img/bg1.png");
-  }
-  .purple {
-    background: rebeccapurple url("./img/bg2.png");
-  }
-  
-  .jobTitle {
-    font-size: 10vw;
-    color: whitesmoke;
-    line-height: 100vh;
-    cursor: default;
-  }
-  
+}
+
+.name {
+  font-size: 5vw;
+  text-align: center;
+  color: whitesmoke;
+  cursor: default;
+}
+
+.highlight {
+  color: #e31b6d;
+  text-shadow: 2px 2px black;
+}
+
+.jobTitleContainer {
+  height: 100vh;
+}
+
+.dark {
+  background: url("./img/bg1.png");
+}
+.purple {
+  background: rebeccapurple url("./img/bg2.png");
+}
+
+.jobTitle {
+  font-size: 10vw;
+  color: whitesmoke;
+  line-height: 100vh;
+  cursor: default;
+}
+
+.projects {
+  display: flex;
+  flex-direction: column;
+  gap: 30vh;
+  padding: 0px 10px;
+}
+
+.projectsTitle {
+  font-size: 10vw;
+  text-align: center;
+  color: whitesmoke;
+  overflow: hidden;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.project:nth-child(2n) {
+  flex-direction: row-reverse;
+}
+
+.phone {
+  flex: 1;
+  width: 300px;
+  height: 600px;
+  position: relative;
+  z-index: 100;
+}
+
+.phoneScreen {
+  width: 264px;
+  height: 567px;
+  position: absolute;
+  top: 17px;
+  left: 18px;
+  border-radius: 28px;
+  overflow: scroll;
+}
+
+.phoneScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.phoneApp {
+  width: 100%;
+}
+
+.projectDetail {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.projectTitle {
+  font-size: 7vw;
+  color: whitesmoke;
+}
+
+.projectDesc {
+  font-size: 20px;
+  color: whitesmoke;
+  text-align: justify;
+  line-height: 40px;
+}
+
+.projectButton {
+  padding: 10px 20px;
+  background-color: transparent;
+  border: 2px solid whitesmoke;
+  color: whitesmoke;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.projectButton::after {
+  content: "View Demo";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  transition: 1s all;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightgreen;
+  color: #555;
+  font-weight: bold;
+}
+
+.projectButton:hover.projectButton::after {
+  transform: translateX(100%);
+}
+
+.laptop {
+  width: 600px;
+  height: 379px;
+  flex: 1;
+  position: relative;
+  z-index: 100;
+}
+
+.laptopScreen {
+  width: 451px;
+  height: 283px;
+  position: absolute;
+  top: 18px;
+  left: 68px;
+  overflow: scroll;
+}
+
+.laptopApp {
+  width: 100%;
+  height: 100%;
+}
+
+.laptopScreen::-webkit-scrollbar {
+  display: none;
+}
+
+.contactContainer {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  margin: 30px;
+}
+
+.contactTitle {
+  font-size: 80px;
+  color: whitesmoke;
+  text-align: center;
+}
+
+.githubChart {
+  width: 820px;
+  text-align: center;
+}
+
+.dates {
+  padding: 10px;
+  color: white;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.githubLg {
+  color: whitesmoke;
+  justify-content: right;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.boxContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.box {
+  width: 15px;
+  height: 15px;
+  background-color: #171c25;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: 3s all ease;
+}
+
+.active:nth-child(4n) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n + 1) {
+  background-color: #195b2c;
+}
+
+.githubChart:hover .active:nth-child(2n) {
+  background-color: #063f24;
+}
+
+.githubSm {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
   .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 30vh;
-    padding: 0px 100px;
-  }
-  
-  .projectsTitle {
-    font-size: 10vw;
-    color: whitesmoke;
-  }
-  
-  .project {
-    display: flex;
-    align-items: center;
-    gap: 100px;
-    height: 100vh;
-    overflow: hidden;
-  }
-  
-  .project:nth-child(2n) {
-    flex-direction: row-reverse;
-  }
-  
-  .phone {
-    flex: 1;
-    width: 300px;
-    height: 600px;
-    position: relative;
-  }
-  
-  .phoneScreen {
-    width: 264px;
-    height: 567px;
-    position: absolute;
-    top: 17px;
-    left: 18px;
-    border-radius: 28px;
-    overflow: scroll;
-  }
-  
-  .phoneScreen::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .phoneApp {
-    width: 100%;
-  }
-  
-  .projectDetail {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    align-items: center;
-  }
-  
-  .projectTitle {
-    font-size: 7vw;
-    color: whitesmoke;
-  }
-  
-  .projectDesc {
-    font-size: 20px;
-    color: whitesmoke;
-    text-align: justify;
-    line-height: 40px;
-  }
-  
-  .projectButton {
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid whitesmoke;
-    color: whitesmoke;
-    cursor: pointer;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  .projectButton::after {
-    content: "View Demo";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: -100%;
-    transition: 1s all;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: lightgreen;
-    color: #555;
-    font-weight: bold;
-  }
-  
-  .projectButton:hover.projectButton::after {
-    transform: translateX(100%);
-  }
-  
-  .laptop {
-    width: 600px;
-    height: 379px;
-    flex: 1;
-    position: relative;
-  }
-  
-  .laptopScreen {
-    width: 451px;
-    height: 283px;
-    position: absolute;
-    top: 18px;
-    left: 68px;
-    overflow: scroll;
-  }
-  
-  .laptopApp {
-    width: 100%;
-    height: 100%;
-  }
-  
-  .laptopScreen::-webkit-scrollbar {
-    display: none;
-  }
-  
-  .linkedinContainer {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-  }
-  
-  .linkedinTitle {
-    font-size: 100px;
-    color: whitesmoke;
-  }
-  
-  .linkedinChart {
-    width: 820px;
+    padding: 0 30px;
     text-align: center;
   }
-  
-  .dates {
-    padding: 10px;
-    color: white;
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
+
+  .project {
+    flex-direction: column;
+    height: max-content;
   }
-  
-  .linkedinLg {
-    color: whitesmoke;
-    justify-content: right;  
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
+  .project:nth-child(2n) {
+    flex-direction: column;
   }
 
-  .boxContainer {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5px;
-  }
-  
-  .box {
-    width: 15px;
-    height: 15px;
-    background-color: #171c25;
-    border-radius: 2px;
-    cursor: pointer;
-    transition: 3s all ease;
-  }
-  
-  .active:nth-child(4n) {
-    background-color: #195b2c;
-  }
-  
-  .linkedinChart:hover .active:nth-child(2n+1){
-    background-color: #195b2c;
+  .phone,
+  .laptop {
+    transform: none !important;
   }
 
-  .linkedinChart:hover .active:nth-child(2n){
-    background-color: #063f24;
-  }
-  
-  .linkedinSm{
+  .githubChart {
     display: none;
   }
-  
-  @media screen and (max-width:1024px) {
-  
-    .projects{
-      padding: 0 30px;
-      text-align: center;
-    }
-  
-    .project{
-      flex-direction: column;
-      height: max-content;
-    }
-    .project:nth-child(2n){
-      flex-direction: column;
-    }
-  
-    .phone,.laptop{
-      transform: none !important;
-    }
-    
-    .linkedinChart{
-      display: none;
-    }
-  
-    .linkedinTitle{
-      text-align: center;
-      font-size: 10vw;
-    }
-  
-    .linkedinSm{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      color:lightsteelblue;
-      font-size: 30px;
-      text-align: center;
-    }
+
+  .githubTitle {
+    text-align: center;
+    font-size: 10vw;
   }
+
+  .githubSm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    color: lightsteelblue;
+    font-size: 30px;
+    text-align: center;
+  }
+}
+/* Footer start */
+.flex {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.flex.row {
+  flex-direction: row;
+}
+
+.flex.wrap {
+  flex-wrap: wrap;
+}
+
+footer {
+  background: #1b242f;
+  padding: 70px 0 50px 0;
+  position: relative;
+}
+footer .mdi-chevron-double-up {
+  background: #a21952;
+  cursor: pointer;
+  font-size: 35pt;
+  height: 50px;
+  left: 0;
+  line-height: 40pt;
+  margin: 0 auto;
+  position: absolute;
+  right: 0;
+  top: -25px;
+  transition: background 1s;
+  width: 47px;
+}
+footer .mdi-chevron-double-up:hover {
+  background: #fb1f79;
+}
+footer .icon-wrap .icon {
+  background: #262f38;
+  cursor: pointer;
+  font-size: 18pt;
+  height: 55px;
+  margin: 0 15px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+  width: 55px;
+}
+footer .icon-wrap .mdi {
+  color: #fff;
+  text-align: center;
+}
+footer .icon-wrap .mdi.mdi-codepen {
+  font-size: 20pt;
+}
+footer .icon-wrap .icon:hover {
+  background: #04c2c9;
+  box-shadow: 0 0 0 3px rgba(4, 94, 201, 0.1);
+  transform: scale(0.9);
+}
+footer .icon-wrap .icon:hover .mdi {
+  color: #fff;
+}
+footer .icon-wrap .icon:hover .mdi {
+  -webkit-animation: toBottomFromTop 0.3s forwards;
+  -moz-animation: toBottomFromTop 0.3s forwards;
+  animation: toBottomFromTop 0.3s forwards;
+}
+footer .footnote {
+  color: #8f9aa7;
+  text-align: center;
+  font-size: 10pt;
+  margin-top: 35px;
+  opacity: 0.6;
+}
+footer .footnote .highlight {
+  color: #e31b6d;
+  font-family: "Open Sans";
+}
+/* Footer end */
