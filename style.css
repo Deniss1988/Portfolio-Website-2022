@@ -5,9 +5,18 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.link:hover {
+  color: #04c2c9;
+  text-decoration: underline;
 }
 
 .button {
@@ -15,7 +24,7 @@ a {
   box-sizing: inherit;
   cursor: pointer;
   display: inline-block;
-  font-size: 20px;
+  font-size: 15px;
   margin-top: 30px;
   padding: 10px 20px;
   transition: all 0.5s;
@@ -44,6 +53,18 @@ a {
   background: url("./img/header.jpg");
   background-size: cover;
   background-color: rebeccapurple;
+}
+
+.name {
+  font-size: 20pt;
+  text-align: center;
+  color: whitesmoke;
+  cursor: default;
+}
+
+.highlight {
+  color: #e31b6d;
+  text-shadow: 1px 1px black;
 }
 
 .flex {
@@ -111,7 +132,7 @@ a {
 
 @media screen and (max-width: 650px) {
   /* Hide the links inside the navigation menu (except for logo/home) */
-  #navbar #myLinks {
+  #nav #myLinks {
     display: none;
   }
   #nav a {
@@ -120,18 +141,6 @@ a {
     width: 100%;
     text-align: left;
   }
-}
-
-.name {
-  font-size: 5vw;
-  text-align: center;
-  color: whitesmoke;
-  cursor: default;
-}
-
-.highlight {
-  color: #e31b6d;
-  text-shadow: 2px 2px black;
 }
 
 .jobTitleContainer {
@@ -149,6 +158,7 @@ a {
   font-size: 10vw;
   color: whitesmoke;
   line-height: 100vh;
+  text-align: center;
   cursor: default;
 }
 
@@ -160,7 +170,8 @@ a {
 }
 
 .projectsTitle {
-  font-size: 10vw;
+  padding-top: 50px;
+  font-size: 7vw;
   text-align: center;
   color: whitesmoke;
   overflow: hidden;
@@ -213,14 +224,14 @@ a {
 }
 
 .projectTitle {
-  font-size: 7vw;
-  color: whitesmoke;
+  font-size: 25pt;
+  color: #e31b6d;
 }
 
 .projectDesc {
-  font-size: 20px;
+  font-size: 15pt;
   color: whitesmoke;
-  text-align: justify;
+  text-align-last: center;
   line-height: 40px;
 }
 
@@ -290,7 +301,7 @@ a {
 }
 
 .contactTitle {
-  font-size: 80px;
+  font-size: 70px;
   color: whitesmoke;
   text-align: center;
 }
@@ -381,10 +392,18 @@ a {
     align-items: center;
     gap: 20px;
     color: lightsteelblue;
-    font-size: 30px;
+    font-size: 15pt;
     text-align: center;
   }
 }
+
+#timer {
+  text-align: center;
+  color: white;
+  font-size: 40px;
+  margin-top: 0px;
+}
+
 /* Footer start */
 .flex {
   align-items: center;

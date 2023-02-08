@@ -1,34 +1,4 @@
-// When the user scrolls the page, execute myFunction
-window.onscroll = function() {myFunction()};
-
-// Get the navbar
-var nav = document.getElementById("nav");
-
-// Get the offset position of the navbar
-var sticky = nav.offsetTop;
-
-// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    nav.classList.add("sticky")
-  } else {
-    nav.classList.remove("sticky");
-  }
-}
-/* Toggle between showing and hiding the navigation menu links when the user clicks on the hamburger menu / bar icon */
-function menu() {
-  var x = document.getElementById("myLinks");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
-
 const boxContainer = document.querySelector(".boxContainer")
-//const saluteTextContainer = document.querySelector(".saluteTextContainer")
-//const saluteImgContainer = document.querySelector(".saluteImgContainer")
-//const authorName = document.querySelector(".name")
 const jobTitleContainers = document.querySelectorAll(".jobTitleContainer")
 const jobTitles = document.querySelectorAll(".jobTitle")
 const projectsTitle = document.querySelector(".projectsTitle")
@@ -71,10 +41,7 @@ window.addEventListener("scroll", ()=>{
   laptop.style.transform = `translateX(calc(530vh - ${offsetY}px))`
   
 })
-//authorName.style.transform= `translateX(${offsetY * 0.1}px)`
 //phones[1].style.transform = `translateX(calc(750vh - ${offsetY}px))`
-//  saluteTextContainer.style.transform= `translateY(${offsetY * 0.1}px)`
-// saluteImgContainer.style.transform= `translate(${offsetY * 0.4}px, ${offsetY * 0.7}px)`
 
 // When the user clicks on the button, scroll to the top of the document
 function topFunction() {
