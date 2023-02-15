@@ -4,7 +4,9 @@
   font-family: "Open Sans", sans-serif;
   box-sizing: border-box;
 }
-
+#controls {
+  position: absolute;
+}
 html {
   scroll-behavior: smooth;
 }
@@ -21,6 +23,7 @@ a {
 
 .button {
   border: 1px solid black;
+  border-radius: 25px;
   box-sizing: inherit;
   cursor: pointer;
   display: inline-block;
@@ -32,7 +35,6 @@ a {
 
 .button:hover {
   background-color: #e31b6d;
-  border-color: black;
 }
 
 .button .mdi {
@@ -45,9 +47,9 @@ a {
 }
 
 .intro {
-  align-items: center;
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   height: 100vh;
   background: url("./img/header.jpg");
@@ -59,7 +61,11 @@ a {
   font-size: 20pt;
   text-align: center;
   color: whitesmoke;
+  text-shadow: #111 2px 2px;
   cursor: default;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  border-radius: 25px;
 }
 
 .highlight {
@@ -67,18 +73,6 @@ a {
   text-shadow: 1px 1px black;
 }
 
-.flex {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-.flex.row {
-  flex-direction: row;
-}
-.flex.wrap {
-  flex-wrap: wrap;
-}
 /* Style the navbar */
 #nav {
   width: 100%;
