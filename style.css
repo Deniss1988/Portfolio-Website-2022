@@ -52,9 +52,6 @@ a {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("./img/header.jpg");
-  background-size: cover;
-  background-color: rebeccapurple;
 }
 
 .name {
@@ -63,6 +60,7 @@ a {
   color: whitesmoke;
   text-shadow: #111 2px 2px;
   cursor: default;
+  -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
   padding: 20px;
   border-radius: 25px;
