@@ -1,31 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Deniss Mijusovs Portfolio</title>
-    <link rel="stylesheet" href="./style.css" />
-    <!-- HOSTED -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css"
-      media="all"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <!-- Walkaround for the menu button not being highlighted-->
-      <section></section>
-      <!-- INTRODUCTION -->
-      <section id="home" class="intro">
-        <div class="name">
-          Hello, I'm <span>Deniss Mijusovs</span>. <br />
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Deniss Mijusovs Portfolio</title>
+	<link rel="stylesheet" href="./style.css" />
+	<!-- HOSTED -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,600italic,300italic,400italic,300,700italic,800italic,800"
+	 rel="stylesheet" type="text/css" />
+	<link href="//cdn.jsdelivr.net/npm/@mdi/font@6.9.96/css/materialdesignicons.min.css" media="all" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container">
+		<!-- Walkaround for the menu button not being highlighted-->
+		<section></section>
+		<!-- INTRODUCTION -->
+		<section id="home" class="intro">
+			<div class="name">
+				Hello, I'm <span>Deniss Mijusovs</span>. <br />
           I'm a full-stack junior web developer. <br />
           <a href="/CV_Deniss_Mijusovs.pdf" download
             ><button type="button" class="button">Download CV</button></a
@@ -108,12 +103,19 @@
             <h1 class="projectTitle">
               <span>Līgo Timer</span>
             </h1>
-            <p class="projectDesc" style="width: 90%;">
+            <p class="projectDesc" style="max-width: 820px">
               Jāņi ([jɑːɲi]) is an annual Latvian festival celebrating the
               summer solstice. Although astronomically the solstice falls on 21
               or 22 June, the public holidays—Līgo Day and Jāņi Day—are on 23
               and 24 June. The day before Jāņi is known as Līgosvētki,
-              Līgovakars or simply Līgo. <a target="_blank" href="https://en.wikipedia.org/wiki/J%C4%81%C5%86i" class="link"></br> *Click here for more information.</a>
+              Līgovakars or simply Līgo.
+              <a
+                target="_blank"
+                href="https://en.wikipedia.org/wiki/J%C4%81%C5%86i"
+                class="link"
+                ><br />
+                *Click here for more information.</a
+              >
             </p>
             <p id="timer"></p>
           </div>
@@ -144,6 +146,35 @@
       <section id="contact" class="contactContainer">
         <h1 class="contactTitle"><span class="highlight">Contact</span></h1>
         <p class="projectDesc">Have a question or want to work together?</p>
+        <br>
+        <form action="https://formsubmit.co/deniscj1988@gmail.com" method="POST" />
+          <input type="hidden" name="_subject" value="New message from Portfolio website!">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name.." required />
+
+          <label for="email">Email</label>
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="Your email.."
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write something.."
+            cols="30"
+            rows="5"
+            required
+          ></textarea>
+
+          <input type="submit" value="Send" />
+          <input type="reset" value="Reset" />
+        </form>
+
         <div class="githubChart">
           <div class="dates">
             <span>Jan</span>
