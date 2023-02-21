@@ -217,6 +217,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  padding: 20px;
   align-items: center;
 }
 
